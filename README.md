@@ -4,7 +4,7 @@
 
 ---
 
-_Developed by: &nbsp; [Chen Kuan-Cheng](https://github.com/ckctc) &nbsp;&&nbsp; [Hsuan]()_
+**__Developed by: &nbsp; [Chen Kuan-Cheng](https://github.com/ckctc) &nbsp;&&nbsp; [Hsuan](https://github.com/Hsuan0958)__**
 
 ---
 

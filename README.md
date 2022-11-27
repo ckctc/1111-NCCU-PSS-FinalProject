@@ -23,7 +23,7 @@
 
 ## Maintainers
 
-[Chen Kuan-Cheng](https://github.com/ckctc)
+- [Chen Kuan-Cheng](https://github.com/ckctc)
 
 ## Contributing
 

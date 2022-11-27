@@ -22,6 +22,7 @@ ui <- fluidPage( #建立page
   
 )
 
+
 ##Server
 server <- function(input, output) {
   
@@ -43,4 +44,6 @@ server <- function(input, output) {
   
 }
 
+
+## Run Shiny App
 shinyApp(ui,server)

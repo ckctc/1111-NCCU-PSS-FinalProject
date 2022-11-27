@@ -1,4 +1,4 @@
-# 111-1 政治大學 城市設計與統計軟體實務 期末專題
+# 111-1 政治大學 程式設計與統計軟體實務 期末專題
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/ckctc/1111-NCCU-PSS-FinalProject?style=flat&logo=GitHub)
 

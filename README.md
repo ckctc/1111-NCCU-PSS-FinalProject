@@ -10,7 +10,7 @@
 
 ## Table of Contents
 
-- [111-1 政治大學 城市設計與統計軟體實務 期末專題](#111-1-政治大學-城市設計與統計軟體實務-期末專題)
+- [111-1 政治大學 程式設計與統計軟體實務 期末專題](#111-1-政治大學-程式設計與統計軟體實務-期末專題)
   - [Table of Contents](#table-of-contents)
   - [Usage](#usage)
   - [Maintainers](#maintainers)

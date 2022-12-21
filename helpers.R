@@ -6,6 +6,10 @@ library(rvest) #網頁擷取
 library(magrittr) #for chaining commands
 library(stringr) #字串處理
 library(bslib) #bootstrap sass
+library(shinycssloaders)
+library(shinyBS)
+library(shinydashboard)
+
 
 ##測試Input是否正確，且若不符則顯示警告訊息
 
@@ -37,6 +41,10 @@ get.chem <- function(web){
   }
   
   chem <- as.data.frame(chem) #將結果轉為dataframe
-  
-  
+
 }
+
+# resultAllergy <- data.frame(Allergy = c())
+
+lan <- get.chem("https://www.cosdna.com/cht/cosmetic_7aa222320.html")
+kie <- get.chem("https://www.cosdna.com/cht/cosmetic_a814392059.html")

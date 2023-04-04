@@ -23,7 +23,7 @@ sidebar <-
       style = "position: relative; overflow: visible;",
       menuItem("輸入保養品網址",tabName = "WebInput",icon = icon("earth-americas")),
       menuItem("儲存的成分表",tabName = "Saved",icon = icon("clipboard-list")),
-      # menuItem("輸入過敏源",tabName = "Allergy",icon = icon("person-dots-from-line")),
+      menuItem("輸入過敏源",tabName = "Allergy",icon = icon("person-dots-from-line")),
       menuItem("成分比較",tabName = "Compare",icon = icon("code-compare"))
       )
     )
@@ -51,31 +51,31 @@ body <-
       tabItem(tabName = "Saved",
               sidebarLayout(
                 sidebarPanel(
-                  selectInput("choice","請選擇保養品",c("小黑瓶","淡斑精華"))
+                  selectInput("choice","請選擇保養品",c("請選擇","小黑瓶","淡斑精華"))
                 ),
                 mainPanel(
                   DT::dataTableOutput("choiceDT")
                 )
               )
               ),
-    # tabItem(tabName = "Allergy",
-    #         sidebarLayout(
-    #           sidebarPanel(
-    #             textInput("allergy","請輸入過敏源／警示的成分",value = ""),
-    #             actionButton("addAllergy","新增")
-    #           ),
-    #           mainPanel(
-    #             DT::dataTableOutput("allergyDT")
-    #           )
-    #         )
-    #         ),
+    tabItem(tabName = "Allergy",
+            sidebarLayout(
+              sidebarPanel(
+                textInput("allergy","請輸入過敏源／警示的成分",value = ""),
+                actionButton("addAllergy","新增")
+              ),
+              mainPanel(
+                DT::dataTableOutput("allergyDT")
+              )
+            )
+            ),
     tabItem(tabName = "Compare",
             fluidRow(
              column(6,
-               selectInput("select","請選擇保養品",c("小黑瓶","淡斑精華"))
+               selectInput("select","請選擇保養品",c("請選擇","小黑瓶","淡斑精華"))
                ),
              column(6,
-               selectInput("select2","請選擇保養品",c("小黑瓶","淡斑精華"))
+               selectInput("select2","請選擇保養品",c("請選擇","小黑瓶","淡斑精華"))
                )
             ),
             fluidRow(
@@ -87,7 +87,14 @@ body <-
               )
             ),
             fluidRow(
-              h1("相衝成分警告", style = "color: red")
+              column(5,
+                     ),
+              column(2,actionButton("compare","開始比對")),
+              column(5,),style = "margin-top:30px;"
+              
+            ),
+            fluidRow(
+              h1("相衝成分／過敏警告", style = "color: red")
             )
             )
     )
@@ -121,6 +128,8 @@ server <- function(input, output) {
       choiceResult <- lan
     }else if(input$choice=="淡斑精華"){
       choiceResult <- kie
+    }else{
+      choiceResult <- c()
     }
   )
   
@@ -144,6 +153,8 @@ server <- function(input, output) {
       selectResult <- lan
     }else if(input$select=="淡斑精華"){
       selectResult <- kie
+    }else{
+      choiceResult <- c()
     }
   )
   
@@ -156,6 +167,8 @@ server <- function(input, output) {
       selectResult <- lan
     }else if(input$select2=="淡斑精華"){
       selectResult <- kie
+    }else{
+      choiceResult <- c()
     }
   )
   
